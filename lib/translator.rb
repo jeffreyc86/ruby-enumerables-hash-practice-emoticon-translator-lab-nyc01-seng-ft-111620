@@ -11,11 +11,14 @@ def load_library(file)
   end
 end
 
+# use .find
+
 def get_japanese_emoticon(file, e_e)
   new_hash2 = load_library(file)
   new_hash2.each do |k| 
+    binding.pry
       if k[:english] == e_e
-        return k[:japanese]
+        return k[v][:japanese]
       else
         puts "Sorry, that emoticon was not found"
       end
