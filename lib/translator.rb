@@ -6,10 +6,11 @@ def load_library(file)
   lib = YAML.load_file(file)
   new_hash = {}
   lib.each do |key, value|
-    if !new_hash[key]
-    new_hash[key] = {:english => value[0], :japanese => value[1]}
+    new_hash[key] = {}
+    new_hash[key][:english] = value[0]
+    new_hash[key][:japanese] = value[1]
     end
-  end
+  new_hash
 end
 
 def get_japanese_emoticon(file, e_e)
