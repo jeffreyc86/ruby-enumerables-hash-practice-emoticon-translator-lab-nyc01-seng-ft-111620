@@ -4,21 +4,22 @@ require 'yaml'
 
 def load_library(file)
   lib = YAML.load_file(file)
-  new_hash = {}
-  lib.each do |key, value|
-    new_hash[key] = {}
-    new_hash[key][:english] = value[0]
-    new_hash[key][:japanese] = value[1]
+  lib.each_with_object({}) do |(key, value), new_hash|
+    if !new_hash[key]
+    new_hash[key] = {:english => value[0], :japanese => value[1]}
     end
-  new_hash
+  end
 end
 
-def get_japanese_emoticon(file, e)
+def get_japanese_emoticon(file, e_e)
   new_hash2 = load_library(file)
-  emoticon = new_hash2.keys.find do |k| 
-      new_hash2[k][:english] == e
-  end
-  emoticon ? new_hash2[emoticon][:japanese] : ""
+  new_hash2.each do |k| 
+      if k[:english] == e_e
+        return k[:japanese]
+      else
+        puts "Sorry, that emoticon was not found"
+      end
+    end
 end
 
 def get_english_meaning (file, emoticon)
