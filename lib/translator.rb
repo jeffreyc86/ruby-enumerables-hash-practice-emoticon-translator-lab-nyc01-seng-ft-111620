@@ -18,7 +18,7 @@ def get_japanese_emoticon(file, e)
   emoticon = new_hash2.keys.find do |k| 
       new_hash2[k][:english] == e
   end
-  emoticon ? new_hash2[emoticon][:japanese] : puts "Sorry"
+  emoticon ? new_hash2[emoticon][:japanese] : ""
 end
 
 def get_english_meaning (file, emoticon)
