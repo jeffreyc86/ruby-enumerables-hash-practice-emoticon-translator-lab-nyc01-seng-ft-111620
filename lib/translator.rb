@@ -13,8 +13,8 @@ end
 
 def get_japanese_emoticon(file, e_e)
   new_hash2 = load_library(file)
-  binding.pry
   new_hash2.each do |k, v| 
+    binding.pry
       if k[v][:english] == e_e
         return k[v][:japanese]
       else
