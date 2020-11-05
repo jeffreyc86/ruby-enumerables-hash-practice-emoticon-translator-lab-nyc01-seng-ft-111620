@@ -15,7 +15,7 @@ end
 
 def get_japanese_emoticon(file, e_e)
   new_hash2 = load_library(file)
-  new_hash2.each do |k, v| 
+  new_hash2.keys.find do |k| 
       if k[v][:english] == e_e
         return k[v][:japanese]
       else
