@@ -16,7 +16,7 @@ def get_japanese_emoticon(file, e_e)
   new_hash2.each do |k, v| 
     binding.pry
       if k[v][:english] == e_e
-        puts k[v][:japanese]
+        return k[v][:japanese]
       else
         puts "Sorry, that emoticon was not found"
       end
