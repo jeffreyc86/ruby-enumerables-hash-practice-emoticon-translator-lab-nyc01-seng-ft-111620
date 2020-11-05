@@ -15,10 +15,10 @@ end
 
 def get_japanese_emoticon(file, e_e)
   new_hash2 = load_library(file)
-  new_hash2.each do |k| 
+  new_hash2.each do |k, v| 
     binding.pry
       if k[:english] == e_e
-        return k[v][:japanese]
+        return k[:japanese]
       else
         puts "Sorry, that emoticon was not found"
       end
