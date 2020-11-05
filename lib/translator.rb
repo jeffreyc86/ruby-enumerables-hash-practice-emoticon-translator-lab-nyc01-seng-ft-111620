@@ -4,7 +4,8 @@ require 'yaml'
 
 def load_library(file)
   lib = YAML.load_file(file)
-  lib.each_with_object({}) do |(key, value), new_hash|
+  new_hash = {}
+  lib.each do |key, value|
     if !new_hash[key]
     new_hash[key] = {:english => value[0], :japanese => value[1]}
     end
