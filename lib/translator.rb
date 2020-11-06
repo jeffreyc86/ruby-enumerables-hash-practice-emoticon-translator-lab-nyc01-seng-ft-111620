@@ -18,7 +18,7 @@ def get_english_meaning (file, emoticon)
     if v[:japanese] == emoticon
       return k
       binding.pry
-    elsif v.value?(emoticon) = false
+    elsif v.value?(emoticon) = False
       return Sorry, that emoticon was not found"
     end
   end
