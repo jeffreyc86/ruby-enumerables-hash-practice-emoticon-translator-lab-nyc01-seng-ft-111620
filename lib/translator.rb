@@ -15,6 +15,7 @@ end
 def get_english_meaning (file, emoticon)
   h = load_library(file)
   test = h.any? { |k, v| v[:japanese] == emoticon} 
+  binding.pry
     if test == true
       return k
     else
