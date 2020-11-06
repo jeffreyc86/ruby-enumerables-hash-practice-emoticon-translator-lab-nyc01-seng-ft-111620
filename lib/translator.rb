@@ -15,7 +15,7 @@ end
 def get_english_meaning (file, emoticon)
   h = load_library(file)
   h.each do |k, v|
-    if v[:japanese] == emoticon
+    if v.value?(emoticon) == true && v[:japanese] == emoticon
       return k
       binding.pry
     elsif v.value?(emoticon) == false
