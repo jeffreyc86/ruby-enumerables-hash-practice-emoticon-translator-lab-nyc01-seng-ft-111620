@@ -18,9 +18,8 @@ def get_english_meaning (file, emoticon)
     if v[:japanese] == emoticon
       return k
     end
-    else
-      puts "Sorry, that emoticon was not found"
   end
+  false 
 end
 
 
