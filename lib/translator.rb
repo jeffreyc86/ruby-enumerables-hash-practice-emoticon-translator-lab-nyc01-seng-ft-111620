@@ -19,7 +19,7 @@ def get_english_meaning (file, emoticon)
       return k
       binding.pry
     elsif v.value?(emoticon) == false
-      return "Sorry, that emoticon was not found"
+      puts "Sorry, that emoticon was not found"
     end
   end
 end
