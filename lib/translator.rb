@@ -13,11 +13,7 @@ end
 
 def get_english_meaning (file, emoticon)
   h = load_library(file)
-  h.select { |k, v| 
-    
-  binding.pry
-    end 
-  end
+  (h.select { |k, v| v[:japanese] = emoticon})[0]
 end
 
 # use .find
