@@ -12,8 +12,12 @@ def load_library(file)
 end
 
 def get_english_meaning (file, emoticon)
+  h = load_library(file)
+  h.each do |k, v|
+    if 
   binding.pry
-  # code goes here
+    end 
+  end
 end
 
 # use .find
