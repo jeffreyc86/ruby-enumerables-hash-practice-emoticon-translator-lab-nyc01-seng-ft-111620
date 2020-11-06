@@ -14,10 +14,10 @@ end
 hash = load_library("./lib/emoticons.yml")
 binding.pry
 
-# def get_english_meaning (file, emoticon)
-#   h = load_library(file)
-#   h.select { |k, v| v[:japanese] = emoticon}
-# end
+def get_english_meaning (file, emoticon)
+  h = load_library(file)
+  h.select { |k, v| v[:japanese] = emoticon}
+end
 
 
 
