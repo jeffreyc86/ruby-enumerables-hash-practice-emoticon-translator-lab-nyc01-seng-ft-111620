@@ -15,11 +15,11 @@ end
 def get_english_meaning (file, emoticon)
   h = load_library(file)
   test = h.any? { |k, v| v[:japanese] == emoticon} 
-    if v[:japanese] == emoticon
+    if test == true
       return k
-    elsif v[:japanese] != emoticon
+    else
       return "Sorry, that emoticon was not found"
-  end
+    end
 end
 
 
