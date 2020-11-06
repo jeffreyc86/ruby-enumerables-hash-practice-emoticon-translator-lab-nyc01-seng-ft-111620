@@ -11,8 +11,6 @@ def load_library(file)
   end
 end
 
-hash = load_library("./lib/emoticons.yml")
-binding.pry
 
 def get_english_meaning (file, emoticon)
   h = load_library(file)
