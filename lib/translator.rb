@@ -19,7 +19,7 @@ def get_english_meaning (file, emoticon)
       return k
     end
   end
-  false 
+  false puts "Sorry, that emoticon was not found"
 end
 
 
