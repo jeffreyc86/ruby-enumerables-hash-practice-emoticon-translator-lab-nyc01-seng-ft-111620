@@ -17,7 +17,7 @@ def get_english_meaning (file, emoticon)
   h.each do |k, v|
     if v[:japanese] == emoticon
       return k
-      binding.pry
+binding.pry
     # elsif v.value?(emoticon) == false
     #   return Sorry, that emoticon was not found"
     end
