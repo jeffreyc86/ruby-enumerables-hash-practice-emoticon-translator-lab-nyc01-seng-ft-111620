@@ -14,7 +14,7 @@ end
 
 def get_english_meaning (file, emoticon)
   h = load_library(file)
-  h.each do |k, v, ik, iv|
+  h.each do |k, v, ik|
     binding.pry
   end
 end
