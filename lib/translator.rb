@@ -13,8 +13,8 @@ end
 
 def get_english_meaning (file, emoticon)
   h = load_library(file)
-  h.each do |k, v|
-    if 
+  h.select { |k, v| 
+    
   binding.pry
     end 
   end
