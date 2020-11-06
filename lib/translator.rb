@@ -11,6 +11,8 @@ def load_library(file)
   end
 end
 
+h = load_library()
+
 def get_english_meaning (file, emoticon)
   h = load_library(file)
   h.select { |k, v| v[:japanese] = emoticon}
