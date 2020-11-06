@@ -11,12 +11,12 @@ def load_library(file)
   end
 end
 
-h = load_library()
+h = load_library("./lib/emoticons.yml")
 
-def get_english_meaning (file, emoticon)
-  h = load_library(file)
-  h.select { |k, v| v[:japanese] = emoticon}
-end
+# def get_english_meaning (file, emoticon)
+#   h = load_library(file)
+#   h.select { |k, v| v[:japanese] = emoticon}
+# end
 
 
 
