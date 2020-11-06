@@ -14,7 +14,7 @@ end
 
 def get_english_meaning (file, emoticon)
   h = load_library(file)
-  h.select { |k, v| v[:japanese] == emoticon}
+  h.each do |k, v, ik, iv|
 end
 
 
